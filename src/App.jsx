@@ -16,7 +16,7 @@ function App() {
 
       <div className="min-h-[80vh]">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/MFC" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/gallery" element={<Gallery />} />
