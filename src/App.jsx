@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
-      <div className="min-h-[80vh]">
+      <div className="">
         <Routes>
           <Route path="/MFC" element={<Home />} />
           <Route path="/team" element={<Team />} />
