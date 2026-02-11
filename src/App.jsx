@@ -15,7 +15,7 @@ function App() {
     <HashRouter>
       <Navbar />
 
-      <div className="">
+      <div className="min-h-[80vh]">
         <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/MFC" element={<Home />} />
