@@ -23,9 +23,7 @@ const Home = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 text-white text-center px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-            Mustafaabad Football Club
-          </h1>
+         
 
           <div className="flex gap-4">
             <Link
