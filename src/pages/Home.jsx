@@ -22,25 +22,7 @@ const Home = () => {
         />
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 text-white text-center px-4">
-         
-
-          <div className="flex gap-4">
-            <Link
-              to="/matches"
-              className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md transition"
-            >
-              View Matches
-            </Link>
-
-            <Link
-              to="/team"
-              className="bg-white text-gray-900 px-6 py-3 rounded-md hover:bg-gray-200 transition"
-            >
-              Meet Team
-            </Link>
-          </div>
-        </div>
+       
       </div>
 
       {/* WELCOME SECTION */}
@@ -56,6 +38,25 @@ const Home = () => {
         </p>
       </section>
 
+ <div className=" flex flex-col items-center justify-center text-white text-center px-4">
+         
+
+          <div className="flex gap-4">
+            <Link
+              to="/matches"
+              className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md transition"
+            >
+              View Matches
+            </Link>
+
+            <Link
+              to="/team"
+              className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition"
+            >
+              Meet Team
+            </Link>
+          </div>
+        </div>
       {/* FEATURES SECTION - IMPROVED */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">

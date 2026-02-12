@@ -8,13 +8,13 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-lg relative">
+    <nav className="bg-gray-800 text-white p-4 shadow-lg relative">
       <div className="flex justify-between items-center">
 
         {/* LOGO SECTION */}
-        <div onClick={()=>navigate("/MFC")} className="flex items-center gap-2 text-xl font-bold">
+        <div onClick={()=>navigate("/MFC")} className="flex items-center gap-2 text-xl font-bold cursor-pointer">
           <img src={images.logo} className="size-10 bg-transparent" />
-          <span className="-ml-2 font-heading">MFC</span>
+          <span className="-ml-2 font-heading ">MFC</span>
         </div>
 
         {/* DESKTOP MENU */}

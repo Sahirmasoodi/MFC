@@ -5,18 +5,25 @@ const Team = () => {
     { name: "Abdullah", position: "Captain", number: 7 },
     { name: "Ans Tariq", position: "Forward", number: 17 },
     { name: "Israr", position: "Forward", number: 10 },
+    { name: "Tawfeeq", position: "Midfielder", number: 23 },
     { name: "Safaan", position: "Forward", number: 12 },
     { name: "Uzair Qadeer", position: "Defender", number: 9 },
     { name: "Aqib Ramzan", position: "Midfielder", number: 8 },
     { name: "Ahmed", position: "Defender", number: 5 },
     { name: "Rayan", position: "Forward", number: 11 },
+    { name: "Rehan", position: "Goal Keeper", number: 19 },
+    { name: "Abiyaad", position: "Defender", number: 24 },
     { name: "Haris", position: "Midfielder", number: 14 },
-    { name: "Sahir", position: "Defender", number: 1 },
+    { name: "Sahir", position: "Defender", number: 29 },
     { name: "Basant", position: "Defender", number: 13 },
     { name: "Aamil", position: "Forward", number: 6 },
     { name: "Atiq", position: "Midfielder", number: 16 },
     { name: "Azhaad", position: "Defender", number: 15 },
     { name: "Imaad", position: "Defender", number: 21 },
+    { name: "Haamid", position: "Defender", number: 14 },
+    { name: "Mohsin", position: "Defender", number: 18 },
+    { name: "Muteeb", position: "Defender", number: 22 },
+    { name: "Hyder", position: "Forward", number: 1 },
   ];
 
   return (
@@ -30,7 +37,7 @@ const Team = () => {
         The brothers who represent Mustafaabad FC on the field
       </p>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {players.map((player, index) => (
           <PlayerCard key={index} {...player} />
         ))}
