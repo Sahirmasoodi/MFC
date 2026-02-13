@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sahirmasoodi.github.io/MFC/sitemap.xml
+Sitemap: https://sahirmasoodi.github.io/MFC/sitemap.xml.txt
