@@ -2,7 +2,7 @@ import defaultimg from "../assets/defaultimg.jpg";
 
 const PlayerCard = ({ name, position, number, img }) => {
   return (
-    <div className="group relative rounded-2xl overflow-hidden bg-gray-900 shadow-2xl transition-all duration-500 hover:-translate-y-3">
+    <div className="group relative rounded-2xl overflow-hidden bg-gray-900  border border-gray-800 transition-all duration-500 hover:-translate-y-3 ">
 
       {/* Player Image */}
       <div className="relative h-80 overflow-hidden">
