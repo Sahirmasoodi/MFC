@@ -37,7 +37,7 @@ const About = () => {
           <div
             key={index}
             className="group relative rounded-2xl p-6 
-              bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 
+              bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 
               shadow-xl transition-all duration-500 
               hover:-translate-y-2 hover:shadow-2xl"
           >
@@ -66,7 +66,7 @@ const About = () => {
 
       {/* Values Section */}
       <div className="max-w-5xl mx-auto mt-16 
-        bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 
+        bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 
         p-8 rounded-2xl shadow-xl text-center">
 
         <h3 className="text-2xl md:text-3xl font-semibold mb-8">

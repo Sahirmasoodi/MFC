@@ -84,7 +84,7 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           className="w-full md:w-[600px] 
-          bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900
+          bg-linear-to-br from-gray-900 via-gray-800 to-gray-900
           p-8 rounded-2xl shadow-2xl
           transition-all duration-500 hover:shadow-3xl"
         >

@@ -13,7 +13,7 @@ const PlayerCard = ({ name, position, number, img }) => {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent"></div>
 
         {/* Jersey Number (Large Background Style) */}
         <div className="absolute bottom-6 right-6 text-[110px] font-black text-white/10 leading-none select-none">
