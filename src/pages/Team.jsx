@@ -3,6 +3,8 @@ import aamil from "../assets/aamil.jpeg";
 import abdullah from "../assets/abdullah.jpeg";
 import imaad from "../assets/imaad.jpeg";
 import sahir from "../assets/sahir.jpeg";
+import abyaad from "../assets/abyaad.jpeg";
+import uzair from "../assets/uzair.jpeg";
 import defaultimg from "../assets/defaultimg.jpg";
 const Team = () => {
  const players = [
@@ -11,12 +13,12 @@ const Team = () => {
   { name: "Israr", position: "Forward", number: 10, img: defaultimg },
   { name: "Tawfeeq", position: "Midfielder", number: 23, img: defaultimg },
   { name: "Safaan", position: "Forward", number: 12, img: defaultimg },
-  { name: "Uzair Qadeer", position: "Defender", number: 9, img: defaultimg },
+  { name: "Uzair Qadeer", position: "Defender", number: 9, img: uzair },
   { name: "Aqib Ramzan", position: "Midfielder", number: 8, img: defaultimg },
   { name: "Ahmed", position: "Defender", number: 5, img: defaultimg },
   { name: "Rayan", position: "Forward", number: 11, img: defaultimg },
   { name: "Rehan", position: "Goal Keeper", number: 19, img: defaultimg },
-  { name: "Abiyaad", position: "Defender", number: 24, img: defaultimg },
+  { name: "Abyaad", position: "Defender", number: 24, img: abyaad },
   { name: "Haris", position: "Midfielder", number: 14, img: defaultimg },
   { name: "Sahir", position: "Defender", number: 29, img: sahir },
   { name: "Basant", position: "Defender", number: 13, img: defaultimg },
@@ -29,6 +31,7 @@ const Team = () => {
   { name: "Muteeb", position: "Defender", number: 22, img: defaultimg },
   { name: "Hyder", position: "Forward", number: 1, img: defaultimg },
   { name: "Areeb", position: "Forward", number: 28, img: defaultimg },
+  { name: "Shakir", position: "Defender", number: 27, img: defaultimg },
 ];
 
 
