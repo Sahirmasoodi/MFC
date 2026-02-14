@@ -1,28 +1,44 @@
-const PlayerCard = ({ name, position, number }) => {
-  return (
-    <div className="relative group bg-linear-to-br from-gray-900 to-gray-800 text-white rounded-2xl shadow-lg p-8 text-center overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-tr from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-2xl"></div>
+import defaultimg from "../assets/defaultimg.jpg";
 
-      <div className="absolute top-4 left-4 text-8xl font-extrabold text-white/5 select-none">
-        {number}
+const PlayerCard = ({ name, position, number, img }) => {
+  return (
+    <div className="group relative rounded-2xl overflow-hidden bg-gray-900 shadow-2xl transition-all duration-500 hover:-translate-y-3">
+
+      {/* Player Image */}
+      <div className="relative h-80 overflow-hidden">
+        <img
+          src={img || defaultimg}
+          alt={name}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+
+        {/* Jersey Number (Large Background Style) */}
+        <div className="absolute bottom-6 right-6 text-[110px] font-black text-white/10 leading-none select-none">
+          {number}
+        </div>
       </div>
 
-      <div className="relative z-10">
+      {/* Bottom Info Section */}
+      <div className="relative p-6 bg-gray-950 text-center">
 
-        <div className="text-5xl font-extrabold text-purple-400 mb-2">
-          #{number}
-        </div>
-
-        <h3 className="text-2xl md:text-3xl font-bold tracking-wide mb-1">
+        <h3 className="text-2xl font-bold tracking-wide text-white">
           {name}
         </h3>
 
-        <p className="text-sm font-semibold uppercase tracking-widest text-gray-400">
+        <p className="text-sm uppercase tracking-[4px] text-gray-400 mt-2">
           {position}
         </p>
-        <div className="w-20 h-1 bg-linear-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
 
+        {/* Animated Line */}
+        <div className="w-0 group-hover:w-16 h-[2px] bg-white mx-auto mt-6 transition-all duration-500"></div>
       </div>
+
+      {/* Subtle Hover Glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-white/5"></div>
+
     </div>
   );
 };

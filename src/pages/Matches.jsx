@@ -26,15 +26,9 @@ const Matches = () => {
     {
       team1: "Mustafabad FC",
       team2: "Umarabad FC",
-      date: "December 28, 2025",
-      venue: "Birla Ground",
-    },
-    {
-      team1: "Mustafabad FC",
-      team2: "Parimpora FC",
-      date: "May 18, 2025",
+      date: "February 15, 2026",
       venue: "Maloora Ground",
-    },
+    }
   ];
 
   const pastMatches = [
