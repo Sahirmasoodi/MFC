@@ -23,6 +23,7 @@ const Team = () => {
   { name: "Sahir", position: "Defender", number: 29, img: sahir },
   { name: "Basant", position: "Defender", number: 13, img: defaultimg },
   { name: "Aamil", position: "Forward", number: 6, img: aamil },
+  { name: "Shakir", position: "Defender", number: 27, img: defaultimg },
   { name: "Atiq", position: "Midfielder", number: 16, img: defaultimg },
   { name: "Azhaad", position: "Defender", number: 15, img: defaultimg },
   { name: "Imaad", position: "Defender", number: 21, img: imaad },
@@ -31,7 +32,6 @@ const Team = () => {
   { name: "Muteeb", position: "Defender", number: 22, img: defaultimg },
   { name: "Hyder", position: "Forward", number: 1, img: defaultimg },
   { name: "Areeb", position: "Forward", number: 28, img: defaultimg },
-  { name: "Shakir", position: "Defender", number: 27, img: defaultimg },
 ];
 
 
