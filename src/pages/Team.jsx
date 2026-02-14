@@ -9,6 +9,7 @@ import ahmed from "../assets/ahmed2.jpeg";
 import ans from "../assets/ans.jpeg";
 import areeb from "../assets/areeb.jpeg";
 import israr from "../assets/israr.jpeg";
+import atiq from "../assets/atiq.jpeg";
 import defaultimg from "../assets/defaultimg.jpg";
 const Team = () => {
  const players = [
@@ -22,13 +23,13 @@ const Team = () => {
   { name: "Ahmed", position: "Defender", number: 5, img: ahmed },
   { name: "Rayan", position: "Forward", number: 11, img: defaultimg },
   { name: "Rehan", position: "Goal Keeper", number: 19, img: defaultimg },
-  { name: "Abyaad", position: "Defender", number: 24, img: abyaad },
+  { name: "Abyaad", position: "Defender", number: 4, img: abyaad },
   { name: "Haris", position: "Midfielder", number: 14, img: defaultimg },
   { name: "Sahir", position: "Defender", number: 29, img: sahir },
   { name: "Basant", position: "Defender", number: 13, img: defaultimg },
   { name: "Aamil", position: "Forward", number: 6, img: aamil },
   { name: "Shakir", position: "Defender", number: 27, img: defaultimg },
-  { name: "Atiq", position: "Midfielder", number: 16, img: defaultimg },
+  { name: "Atiq", position: "Midfielder", number: 16, img: atiq },
   { name: "Azhaad", position: "Defender", number: 15, img: defaultimg },
   { name: "Imaad", position: "Defender", number: 21, img: imaad },
   { name: "Haamid", position: "Defender", number: 14, img: defaultimg },
