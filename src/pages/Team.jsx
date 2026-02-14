@@ -10,6 +10,7 @@ import ans from "../assets/ans.jpeg";
 import areeb from "../assets/areeb.jpeg";
 import israr from "../assets/israr.jpeg";
 import atiq from "../assets/atiq.jpeg";
+import afgun from "../assets/afgun.jpeg";
 import defaultimg from "../assets/defaultimg.jpg";
 const Team = () => {
   const players = [
@@ -37,6 +38,7 @@ const Team = () => {
     { name: "Muteeb", position: "Defender", number: 22, img: defaultimg },
     { name: "Hyder", position: "Forward", number: 1, img: defaultimg },
     { name: "Areeb", position: "Forward", number: 28, img: areeb },
+    { name: "Afgun", position: "Defender", number: 30, img: afgun },
   ];
 
   return (
