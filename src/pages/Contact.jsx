@@ -4,7 +4,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -13,7 +13,7 @@ const Contact = () => {
   function handleChange(e) {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }
 
@@ -37,9 +37,9 @@ const Contact = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
-        body: json
+        body: json,
       });
 
       const result = await res.json();
@@ -50,7 +50,7 @@ const Contact = () => {
         setFormData({
           name: "",
           email: "",
-          message: ""
+          message: "",
         });
 
         setTimeout(() => {
@@ -66,18 +66,16 @@ const Contact = () => {
   }
 
   return (
-    <div className="p-6 md:p-10 ">
-
+    <div className="min-h-screen bg-gray-950 text-white p-6 md:p-12">
       {/* Header */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-3">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
           Contact Mustafaabad FC
         </h2>
 
-        <p className="text-gray-600">
-          Want to play a friendly match?  
-          Have any questions?  
-          Feel free to reach out to us.
+        <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+          Want to play a friendly match? Have any questions? Feel free to reach
+          out to us.
         </p>
       </div>
 
@@ -85,12 +83,14 @@ const Contact = () => {
       <div className="flex justify-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full md:w-[600px] bg-white p-8 rounded-lg shadow"
+          className="w-full md:w-[600px] 
+          bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900
+          p-8 rounded-2xl shadow-2xl
+          transition-all duration-500 hover:shadow-3xl"
         >
-
           {/* Name */}
           <div className="mb-6">
-            <label className="block text-gray-700 mb-2">
+            <label className="block text-gray-400 mb-2 text-sm">
               Your Name
             </label>
             <input
@@ -98,7 +98,10 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               type="text"
-              className="w-full border border-gray-300 p-3 rounded outline-none focus:border-gray-500"
+              className="w-full bg-gray-950 border border-gray-700 
+              p-3 rounded-lg outline-none 
+              focus:border-white focus:ring-1 focus:ring-white 
+              transition"
               placeholder="Enter your name"
               required
             />
@@ -106,7 +109,7 @@ const Contact = () => {
 
           {/* Email */}
           <div className="mb-6">
-            <label className="block text-gray-700 mb-2">
+            <label className="block text-gray-400 mb-2 text-sm">
               Email Address
             </label>
             <input
@@ -114,7 +117,10 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               type="email"
-              className="w-full border border-gray-300 p-3 rounded outline-none focus:border-gray-500"
+              className="w-full bg-gray-950 border border-gray-700 
+              p-3 rounded-lg outline-none 
+              focus:border-white focus:ring-1 focus:ring-white 
+              transition"
               placeholder="Enter your email"
               required
             />
@@ -122,14 +128,15 @@ const Contact = () => {
 
           {/* Message */}
           <div className="mb-6">
-            <label className="block text-gray-700 mb-2">
-              Message
-            </label>
+            <label className="block text-gray-400 mb-2 text-sm">Message</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded outline-none focus:border-gray-500 h-36"
+              className="w-full bg-gray-950 border border-gray-700 
+              p-3 rounded-lg outline-none 
+              focus:border-white focus:ring-1 focus:ring-white 
+              transition h-36"
               placeholder="Write your message..."
               required
             />
@@ -139,20 +146,21 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gray-800 hover:bg-gray-700 text-white py-3 rounded font-semibold transition"
+            className="w-full bg-white text-black py-3 rounded-lg 
+            font-semibold transition-all duration-300 
+            hover:bg-gray-200 hover:scale-[1.02] 
+            disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
 
           {success && (
-            <p className="text-green-600 text-center mt-4">
+            <p className="text-green-400 text-center mt-4 text-sm">
               Message sent successfully!
             </p>
           )}
-
         </form>
       </div>
-
     </div>
   );
 };

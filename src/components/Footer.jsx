@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-950 text-center py-3 text-xs">
+      <div className="bg-black text-center py-3 text-xs">
         © {new Date().getFullYear()} Mustafaabad Football Club
       </div>
 

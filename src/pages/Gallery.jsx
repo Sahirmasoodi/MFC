@@ -13,24 +13,34 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="p-6 md:p-10 bg-gray-50 min-h-screen">
+    <div className="min-h-screen bg-gray-950 text-white p-6 md:p-12">
 
-      <h2 className="text-4xl font-heading font-bold text-center mb-8">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-14">
         Gallery
       </h2>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
 
         {photoList.map((img, index) => (
           <div
             key={index}
-            className="break-inside-avoid overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition duration-300"
+            className="group relative break-inside-avoid overflow-hidden 
+              rounded-2xl shadow-xl transition-all duration-500 
+              hover:-translate-y-2 hover:shadow-2xl"
           >
             <img
               src={img}
-              className="w-full rounded-lg hover:scale-105 transition duration-300"
               alt={`gallery-${index}`}
+              className="w-full object-cover rounded-2xl 
+                transition-transform duration-700 
+                group-hover:scale-110 brightness-90 group-hover:brightness-100"
             />
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            {/* Subtle Glow */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-white/5 rounded-2xl"></div>
           </div>
         ))}
 
