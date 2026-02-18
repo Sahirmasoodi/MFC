@@ -5,10 +5,11 @@ import imaad from "../assets/imaad.jpeg";
 import sahir from "../assets/sahir.jpeg";
 import abyaad from "../assets/abyaad.jpeg";
 import uzair from "../assets/uzair.jpeg";
-import ahmed from "../assets/ahmed2.jpeg";
+import ahmed from "../assets/ahmed.jpeg";
 import ans from "../assets/ans.jpeg";
 import areeb from "../assets/areeb.jpeg";
 import israr from "../assets/israr.jpeg";
+import hamid from "../assets/hamid.jpeg";
 import atiq from "../assets/atiq.jpeg";
 import afgun from "../assets/afgun.jpeg";
 import defaultimg from "../assets/defaultimg.jpg";
@@ -33,7 +34,7 @@ const Team = () => {
     { name: "Atiq", position: "Midfielder", number: 16, img: atiq },
     { name: "Azhaad", position: "Defender", number: 15, img: defaultimg },
     { name: "Imaad", position: "Defender", number: 21, img: imaad },
-    { name: "Haamid", position: "Defender", number: 14, img: defaultimg },
+    { name: "Haamid", position: "Defender", number: 14, img: hamid },
     { name: "Mohsin", position: "Defender", number: 18, img: defaultimg },
     { name: "Muteeb", position: "Defender", number: 22, img: defaultimg },
     { name: "Hyder", position: "Forward", number: 1, img: defaultimg },
