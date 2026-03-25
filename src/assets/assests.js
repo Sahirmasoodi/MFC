@@ -6,6 +6,7 @@ import img5 from "./5.jpeg";
 import img6 from "./6.jpeg";
 import img7 from "./7.jpeg";
 import img8 from "./8.jpeg";
+import img9 from "./9.png";
 import mobileHome from "./mobileHome.png";
 import desktopHome from "./desktopHome.png";
 import logo from "./logo.png";
@@ -19,6 +20,7 @@ export const images = {
   img6,
   img7,
   img8,
+  img9,
   logo,
   mobileHome,
   desktopHome,

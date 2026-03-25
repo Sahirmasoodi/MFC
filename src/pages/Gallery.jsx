@@ -2,6 +2,7 @@ import { images } from "../assets/assests";
 
 const Gallery = () => {
   const photoList = [
+    images.img9,
     images.img1,
     images.img2,
     images.img7,
