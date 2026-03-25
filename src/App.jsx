@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -12,13 +12,12 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar />
 
       <div className="min-h-[80vh]">
         <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="/MFC" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/gallery" element={<Gallery />} />
@@ -29,7 +28,7 @@ function App() {
       </div>
 
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
