@@ -10,6 +10,7 @@ import img9 from "./9.png";
 import mobileHome from "./mobileHome.png";
 import desktopHome from "./desktopHome.png";
 import logo from "./logo.png";
+// import logo from "./logo.jpeg";
 
 export const images = {
   img1,
