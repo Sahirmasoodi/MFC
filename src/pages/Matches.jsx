@@ -105,6 +105,13 @@ const Matches = () => {
   const pastMatches = [
     {
       team1: "Mustafabad FC",
+      team2: "Haroon FC",
+      date: "March 26, 2026",
+      venue: "HMT Ground",
+      result: "5 - 4",
+    },
+    {
+      team1: "Mustafabad FC",
       team2: "Umarabad FC",
       date: "February 15, 2026",
       venue: "Maloora Ground",
