@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   return (
-    <nav className="bg-gray-800 text-white p-4 shadow-lg relative">
+    <nav className="bg-gray-900 text-white p-4 shadow-lg relative">
       <div className="flex justify-between items-center">
 
         {/* LOGO SECTION */}
@@ -27,15 +27,13 @@ const Navbar = () => {
           <Link to="/contact" className="hover:text-gray-400">Contact</Link>
         </ul>
 
-        {/* MOBILE MENU ICON */}
         <div className="md:hidden text-2xl cursor-pointer" onClick={() => setOpen(!open)}>
           {open ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-gray-800 absolute left-0 top-full w-full flex flex-col text-center py-4 gap-4 z-50">
+        <div className="md:hidden bg-gray-900 absolute left-0 top-full w-full flex flex-col text-center py-10 gap-4 z-50">
           <Link onClick={() => setOpen(false)} to="/" className="hover:text-gray-400">Home</Link>
           <Link onClick={() => setOpen(false)} to="/team" className="hover:text-gray-400">Team</Link>
           <Link onClick={() => setOpen(false)} to="/matches" className="hover:text-gray-400">Matches</Link>
