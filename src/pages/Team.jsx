@@ -19,9 +19,10 @@ import safaan from "../assets/safaan.png";
 import mohsin from "../assets/mohsin.png";
 import basant from "../assets/basant.png";
 import defaultimg from "../assets/defaultimg.jpg";
+import { motion } from "framer-motion";
+import { FaFutbol } from "react-icons/fa";
 
 const Team = () => {
-  // ⭐ Playing XI
   const playingPlayers = [
     { name: "Safaan", position: "Captain", number: 10, img: safaan },
     { name: "Abdullah", position: "Forward", number: 9, img: abdullah },
@@ -44,12 +45,7 @@ const Team = () => {
     { name: "Haris", position: "Midfielder", number: 16, img: haris },
     { name: "Basant", position: "Defender", number: 17, img: basant },
     { name: "Shakir", position: "Defender", number: 18, img: defaultimg },
-    {
-      name: "Aqib Ramzan",
-      position: "Midfielder",
-      number: 19,
-      img: defaultimg,
-    },
+    { name: "Aqib Ramzan", position: "Midfielder", number: 19, img: defaultimg },
     { name: "Azhaad", position: "Defender", number: 20, img: defaultimg },
     { name: "Tawfeeq", position: "Midfielder", number: 21, img: defaultimg },
     { name: "Muteeb", position: "Defender", number: 22, img: defaultimg },
@@ -59,59 +55,159 @@ const Team = () => {
     { name: "Shahid", position: "Goal Keeper", number: 26, img: shahid },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -30 }, 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-gray-950 text-white p-6 md:p-12">
-      <div className="text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h2>
-        <p className="text-gray-400 text-sm md:text-base">
+    <motion.div
+      className="min-h-screen bg-black text-white p-6 md:p-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="absolute top-0 left-0 w-96 h-96 bg-gray-900/20 rounded-full blur-3xl -z-10"
+        animate={{ y: [0, 40, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
+      <motion.div
+        className="text-center mb-14 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h2
+          variants={titleVariants}
+          className="text-5xl md:text-6xl font-black mb-4 text-white tracking-tight"
+        >
+          Our Team
+        </motion.h2>
+
+        <motion.p
+          variants={titleVariants}
+          className="text-gray-400 text-base md:text-lg"
+        >
           The brothers who represent Mustafaabad FC on the field
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="mb-16">
-       <div className="text-center mb-8">
-          <h3 className="text-2xl font-semibold text-gray-300 inline-block px-6 py-2 border border-gray-700 rounded-full bg-gray-900/50 backdrop-blur-sm">
-            Core Squad
-          </h3>
-        </div>
+      
+      <motion.div
+        className="mb-20"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex items-center justify-center gap-3 px-8 py-3 bg-gray-900/60 border border-gray-800 rounded-full backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-gray-200">Core Squad</h3>
+            </div>
+          </motion.div>
+        </motion.div>
 
-        <div
-          className="grid 
-          grid-cols-1 
-          sm:grid-cols-2 
-          md:grid-cols-3 
-          lg:grid-cols-4 
-          gap-8 
-          max-w-7xl mx-auto"
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {playingPlayers.map((player, index) => (
-            <PlayerCard key={index} {...player} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.06,
+              }}
+              viewport={{ once: true }}
+            >
+              <PlayerCard {...player} />
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div>
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-semibold text-gray-300 inline-block px-6 py-2 border border-gray-700 rounded-full bg-gray-900/50 backdrop-blur-sm">
-            Extended Squad
-          </h3>
-        </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="inline-block"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex items-center justify-center gap-3 px-8 py-3 bg-gray-900/60 border border-gray-800 rounded-full backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-gray-200">Extended Squad</h3>
+            
+            </div>
+          </motion.div>
+        </motion.div>
 
-        <div
-          className="grid 
-          grid-cols-1 
-          sm:grid-cols-2 
-          md:grid-cols-3 
-          lg:grid-cols-4 
-          gap-8 
-          max-w-7xl mx-auto"
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {otherPlayers.map((player, index) => (
-            <PlayerCard key={index} {...player} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.06,
+              }}
+              viewport={{ once: true }}
+            >
+              <PlayerCard {...player} />
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
